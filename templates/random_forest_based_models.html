@@ -1,0 +1,14 @@
+{% extends "index.html"%}
+{%block content %}
+
+<main class="content">
+    <h1>Random Forest based models</h1>
+    <p class="p_size_large">Random Forest is a popular ensemble learning algorithm that can be used for multi-label classification, which is a machine learning problem where an instance can be assigned multiple labels simultaneously. The Random Forest algorithm combines multiple decision trees to form a forest of trees, where each tree is trained on a randomly selected subset of the data.</p>
+    <p class="p_size_large">For multi-label classification, Random Forest can be adapted in several ways to handle multiple labels. One common approach is to use one Random Forest classifier per label, where each classifier is trained to predict the presence or absence of a specific label. This is known as the binary relevance approach, and it considers each label independently without considering the dependencies between labels.</p>
+    <p class="p_size_large">Another approach is to use a single Random Forest classifier for all labels, where the classifier is trained to predict the presence or absence of each label. This is known as the classifier chain approach, and it takes into account the dependencies between labels by considering the predictions of one label as features for the next label.</p>
+    <p class="p_size_large">A third approach is to use a single Random Forest classifier for all labels, where the classifier is trained to predict the combination of labels for each instance. This is known as the Label Powerset approach, and it transforms the multi-label classification problem into a multi-class classification problem, where each combination of labels is considered a separate class.</p>
+    <p class="p_size_large">The Random Forest algorithm has several advantages for multi-label classification. It can handle missing or noisy data, as the ensemble of decision trees can account for the variance in the data. It also has good accuracy, as the combination of multiple trees reduces the risk of overfitting to the training data. Additionally, Random Forest is computationally efficient, as the decision trees can be constructed in parallel, which reduces the computation time.</p>
+    <p class="p_size_large">In conclusion, Random Forest is a useful tool for multi-label classification, as it can be adapted in several ways to handle multiple labels. It has good accuracy, can handle missing or noisy data, and is computationally efficient. Additionally, Random Forest can be used with the binary relevance, classifier chain, or Label Powerset approaches, depending on the specific requirements of the problem.</p>
+</main>
+
+{% endblock %}

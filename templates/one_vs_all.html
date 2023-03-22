@@ -1,0 +1,13 @@
+{% extends "index.html"%}
+{%block content %}
+
+<main class="content">
+    <h1>One-vs-All</h1>
+    <p class="p_size_large">The One-vs-All (also known as One-vs-Rest) algorithm is a multiclass classification technique that is used when there are more than two classes to predict. It is a modification of the binary classification algorithm that separates the data into multiple binary classification problems, with one class being the positive class and all other classes being combined into the negative class.</p>
+    <p class="p_size_large">The One-vs-All algorithm trains multiple binary classifiers, one for each class, with the goal of correctly classifying instances of that class as positive and all other instances as negative. The algorithm trains a classifier for each class, with the positive class being the instances of that class and the negative class being all other instances. The predictions of each classifier are then combined to make the final prediction. The class with the highest prediction score is selected as the predicted class.</p>
+    <p class="p_size_large">To train the binary classifiers, a loss function is used to optimize the model's predictions. Commonly used loss functions for binary classification problems include the logistic loss and the hinge loss. The logistic loss is used for logistic regression and the hinge loss is used for support vector machines (SVMs). The loss function measures the error between the predicted probabilities and the actual class labels and is minimized during the optimization process to produce the best model.</p>
+    <p class="p_size_large">The One-vs-All algorithm is widely used in various domains such as image recognition, speech recognition, and natural language processing. It is a simple and effective approach to multi-class classification problems and can be used with many different binary classifiers.</p>
+    <p class="p_size_large">In conclusion, the One-vs-All algorithm is a useful approach to multi-class classification problems where the goal is to predict the class of an instance. It separates the problem into multiple binary classification problems and trains a classifier for each class, with the final prediction being made by combining the predictions of each classifier. The choice of loss function will depend on the binary classifier being used and the data.</p>
+</main>
+
+{% endblock %}

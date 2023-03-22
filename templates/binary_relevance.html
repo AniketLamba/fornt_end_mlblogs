@@ -1,0 +1,14 @@
+{% extends "index.html"%}
+{%block content %}
+
+<main class="content">
+    <h1>Binary Relevance</h1>
+    <p class="p_size_large">Binary Relevance (BR) is a simple and straightforward multi-label classification algorithm used for problems where each instance has multiple class labels. The name "Binary Relevance" refers to the fact that the algorithm considers each label as a binary classification problem, i.e. it decides whether the label is relevant or not relevant to a given instance.</p>
+    <p class="p_size_large">The basic idea behind BR is to train a separate binary classifier for each label, where each classifier is responsible for predicting whether the instance belongs to that label or not. The outputs of these classifiers are combined to form the final multi-label prediction.</p>
+    <p class="p_size_large">Mathematically, the BR algorithm can be represented as a set of binary classifiers, each with a decision boundary represented by a linear function, f(x) = w_i^T x + b_i, where w_i is a weight vector and b_i is a bias term. The final prediction is made by thresholding the output of each classifier, i.e. if f(x) > 0, then the instance belongs to the label, otherwise it does not.</p>
+    <p class="p_size_large">One of the main strengths of the Binary Relevance algorithm is its simplicity, as it does not require any complicated mathematical models or algorithms. However, this simplicity also leads to some limitations. For example, BR does not take into account any correlations or dependencies between the labels, which can lead to suboptimal performance in some cases.</p>
+    <p class="p_size_large">In terms of loss functions, BR typically uses binary cross-entropy loss to evaluate the performance of each binary classifier. The goal is to minimize this loss function, which measures the difference between the predicted probabilities and the actual class labels, by adjusting the weights and biases in the linear function.</p>
+    <p class="p_size_large">In conclusion, Binary Relevance is a simple and straightforward algorithm for solving multi-label classification problems. It trains a separate binary classifier for each label and combines the outputs to form the final multi-label prediction. The algorithm is simple to implement and has a low computational cost, making it a popular choice for multi-label classification problems. However, its simplicity can also lead to limitations, as it does not take into account any correlations or dependencies between the labels.</p>
+</main>
+
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends "index.html"%}
+{%block content %}
+
+<main class="content">
+    <h1>Random Forest</h1>
+    <p class="p_size_large">Random Forest is an ensemble learning method for both classification and regression that combines multiple decision trees to form a more robust model. The algorithm builds multiple decision trees on different random subsets of the data, and the final prediction is made by combining the predictions of all the trees. The idea behind this is that the combination of many weaker models will result in a stronger overall model.</p>
+    <p class="p_size_large">The algorithm starts by randomly selecting a subset of the data to be used to train each decision tree. This is known as bootstrapping, and it results in each decision tree being trained on a slightly different set of data. Each decision tree is also trained on a random subset of the features, so that each tree only sees a portion of the information in the data. The final prediction is made by averaging the predictions of all the trees for regression problems or by taking a majority vote for classification problems.</p>
+    <p class="p_size_large">One of the key strengths of Random Forest is its ability to handle both categorical and numerical features and to handle missing data. Additionally, the algorithm is not prone to overfitting, as the combination of many decision trees tends to reduce the variance of the model. The algorithm also has the ability to estimate feature importance, which can be useful for identifying the most important predictors in the data.</p>
+    <p class="p_size_large">When building the decision trees, the algorithm can use either the Gini impurity or information gain as the criterion for splitting the data. The choice of criterion will depend on the problem and the data. The final prediction can be improved by increasing the number of trees in the forest, although this also increases the computational cost of the algorithm.</p>
+    <p class="p_size_large">In conclusion, Random Forest is a powerful and widely used machine learning algorithm for both classification and regression problems. It combines the strengths of decision trees with the ability to handle a diverse set of features and reduce the variance of the model. Additionally, the algorithm has the ability to estimate feature importance, making it a useful tool for feature selection and model interpretation.</p>
+</main>
+
+{% endblock %}

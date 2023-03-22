@@ -1,0 +1,22 @@
+{% extends "index.html"%}
+{%block content %}
+
+<main class="content">
+    <h1>Support Vector Machines</h1>
+    <p class="p_size_large">Support Vector Machines (SVMs) are a type of supervised learning algorithm used for both binary and multi-class classification and regression analysis. They are designed to find the hyperplane that best separates the data into classes, or that best fits the data in the case of regression.</p>
+    <p class="p_size_large">The mathematical formulation of SVMs involves finding the hyperplane that maximizes the margin, which is the distance between the hyperplane and the closest data points from each class. These closest points are called support vectors and they define the boundary between the classes.</p>
+    <p class="p_size_large">Let's consider a two-class classification problem with data points x_i and corresponding labels y_i, where y_i can be either +1 or -1. The goal of an SVM is to find the hyperplane that separates the data into two classes. The hyperplane can be defined by a weight vector w and a bias b as:</p>
+    <p class="p_size_large">f(x) = w^T x + b, where w^T x is the dot product of w and x.</p>
+    <p class="p_size_large">The hyperplane is chosen so that it maximizes the margin, which is defined as the distance between the hyperplane and the closest data points from each class. The support vectors are the data points that lie on the margin and are closest to the hyperplane. The SVM optimization problem can be formulated as:</p>
+    <p class="p_size_large">minimize 1/2 ||w||^2    </p>
+    <p class="p_size_large">subject to y_i (w^T x_i + b) >= 1 for i = 1, 2, ..., N</p>
+    <p class="p_size_large">where N is the number of data points and ||w||^2 is the squared Euclidean norm of the weight vector w. The constraint y_i (w^T x_i + b) >= 1 ensures that the margin is maximized and all data points are on the correct side of the hyperplane.</p>
+    <p class="p_size_large">The optimization problem can be solved using a variety of algorithms, including gradient descent and the Lagrange multiplier method. The Lagrange multiplier method results in the dual optimization problem, which can be solved using quadratic programming techniques.</p>
+    <p class="p_size_large">In addition to the linear SVM, there is also a non-linear SVM that can handle non-linearly separable data. This is achieved through the use of a kernel function, which maps the data into a new space where a linear boundary can be found. Popular kernel functions include the radial basis function (RBF) kernel and the polynomial kernel.</p>
+    <p class="p_size_large">SVMs also have a number of loss functions that can be used to penalize misclassified data points. The most commonly used loss function is the hinge loss, which is defined as:</p>
+    <p class="p_size_large">L(x, y) = max(0, 1 - y (w^T x + b))</p>
+    <p class="p_size_large">The hinge loss is zero if the data point is correctly classified, and it increases as the data point moves away from the hyperplane. Other loss functions, such as the logistic loss and the squared loss, can also be used with SVMs.</p>
+    <p class="p_size_large">In conclusion, Support Vector Machines are a powerful and flexible machine learning algorithm that have a wide range of applications in various domains. They are particularly useful for problems where the data is non-linearly separable and for problems with high-dimensional data. The mathematical formulation of SVMs involves finding the hyperplane that maximizes the margin, and a variety of algorithms can be used to solve the optimization problem. The use of a kernel function and loss functions allows for a high degree of flexibility in solving a wide range of problems.</p>
+</main>
+
+{% endblock %}

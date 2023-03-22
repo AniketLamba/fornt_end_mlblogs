@@ -1,0 +1,21 @@
+{% extends "index.html"%}
+{%block content %}
+
+<main class="content">
+    <h1>Naive Bayes</h1>
+    <p class="p_size_large">Naive Bayes is a probabilistic algorithm that is based on Bayes' theorem, a mathematical formula that describes the relationship between the probability of an event and the prior knowledge about the conditions that might be related to that event. In the context of machine learning, Naive Bayes is commonly used for classification tasks, where the goal is to predict the class label of a new data point based on its features.</p>
+    <p class="p_size_large">There are several variations of the Naive Bayes algorithm, including Gaussian Naive Bayes, Multinomial Naive Bayes, and Bernoulli Naive Bayes. The key difference between these variations is the way they model the probabilities of the class labels and the features.</p>
+    <p class="p_size_large">The basic idea behind Naive Bayes is to use Bayes' theorem to calculate the posterior probability of a class label given the features of a new data point. Bayes' theorem states that:</p>
+    <p class="p_size_large">P(c | x) = P(x | c) * P(c) / P(x)</p>
+    <p class="p_size_large">where c is the class label, x is the features of the data point, P(c | x) is the posterior probability of c given x, P(x | c) is the likelihood of x given c, P(c) is the prior probability of c, and P(x) is the marginal likelihood of x.</p>
+    <p class="p_size_large">The Naive Bayes algorithm assumes that the features are conditionally independent given the class label. This means that the features are not related to each other, and their influence on the class label can be computed independently. Given this assumption, the likelihood of the features given the class label can be calculated as the product of the individual probabilities of each feature given the class label:</p>
+    <p class="p_size_large">P(x | c) = P(x1 | c) * P(x2 | c) * ... * P(xn | c)</p>
+    <p class="p_size_large">where n is the number of features and xi is the ith feature.</p>
+    <p class="p_size_large">The prior probability of the class label can be calculated as the frequency of the class label in the training data. Finally, the marginal likelihood of the features can be calculated as the sum of the likelihoods of the features given each class label, weighted by the prior probabilities of the class labels:</p>
+    <p class="p_size_large">P(x) = sum(P(x | c) * P(c)) over all c</p>
+    <p class="p_size_large">The class label that has the highest posterior probability given the features of the new data point is chosen as the prediction of the Naive Bayes algorithm.</p>
+    <p class="p_size_large">In the case of regression, the Naive Bayes algorithm is not typically used, as it is designed for classification problems. However, in some cases, the algorithm can be adapted to perform regression by using the mean or median of the target variable among the k nearest neighbors as the prediction, where k is a user-defined parameter.</p>
+    <p class="p_size_large">In conclusion, Naive Bayes is a probabilistic algorithm that is commonly used for classification tasks. The algorithm calculates the posterior probability of a class label given the features of a new data point based on Bayes' theorem and the assumption of conditional independence between the features given the class label. The Naive Bayes algorithm is simple, fast, and efficient, making it a popular choice for large-scale classification problems. However, its performance can be limited by the assumption of independence between the features, which is often not satisfied in real-world data.</p>
+</main>
+
+{% endblock %}

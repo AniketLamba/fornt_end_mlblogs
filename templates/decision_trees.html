@@ -1,0 +1,16 @@
+{% extends "index.html"%}
+{%block content %}
+
+<main class="content">
+    <h1>
+        Decision Trees
+    </h1>
+    <p class="p_size_large">A Decision Tree is a type of machine learning algorithm used for both classification and regression problems. It is a tree-like model that represents a series of decisions based on the features of the data. Each internal node in the tree represents a decision based on one of the features, and the branches of the tree represent the possible outcomes of that decision. The leaves of the tree represent the final predictions of the algorithm.</p>
+    <p class="p_size_large">The algorithm builds the decision tree by recursively splitting the data into smaller subsets based on the feature that best splits the data into classes or reduces the variance in the target variable for regression. The goal is to create a tree that results in the purest subsets of data at the leaves, where the predictions are made based on the majority class or the mean target variable in the subset.</p>
+    <p class="p_size_large">There are several measures that can be used to determine the best split of the data, including information gain, gain ratio, and Gini impurity. Information gain measures the reduction in entropy, or uncertainty, in the target variable after splitting the data based on a feature. Gain ratio is a modification of information gain that takes into account the number of splits in the data. Gini impurity measures the probability of misclassifying a randomly selected data point based on the proportions of the class labels in the subset.</p>
+    <p class="p_size_large">The algorithm continues to split the data into smaller subsets until a stopping criteria is met, such as a minimum number of data points in a subset or a maximum depth of the tree. This can prevent overfitting, where the tree becomes too complex and memorizes the training data instead of generalizing to new data.</p>
+    <p class="p_size_large">Once the decision tree is built, it can be used to make predictions for new data by following the decisions from the root of the tree to a leaf node. The prediction for a new data point is made based on the majority class or the mean target variable in the subset that the data point falls into.</p>
+    <p class="p_size_large">In conclusion, Decision Trees are a powerful and widely used machine learning algorithm for both classification and regression problems. They are easy to interpret and visualize, and they can handle both categorical and numerical features. However, they can also be prone to overfitting and can be biased towards features with many outcomes. Ensemble methods, such as Random Forests and Gradient Boosting, can be used to mitigate these limitations by combining multiple decision trees to form a more robust model.</p>
+</main>
+
+{% endblock %}

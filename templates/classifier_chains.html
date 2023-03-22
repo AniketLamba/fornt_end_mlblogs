@@ -1,0 +1,14 @@
+{% extends "index.html"%}
+{%block content %}
+
+<main class="content">
+    <h1>Classifier Chains</h1>
+    <p class="p_size_large">Classifier chains is a machine learning algorithm that aims to solve the problem of multi-label classification. In multi-label classification, an instance may be assigned multiple labels simultaneously. Classifier chains address this problem by constructing a chain of binary classifiers, where each classifier predicts a single label.</p>
+    <p class="p_size_large">The idea behind the classifier chains algorithm is to exploit the dependencies between the labels to improve the accuracy of the predictions. The dependencies between the labels can be represented as a graph, where each node represents a label and each edge represents a dependency between two labels. The classifier chains algorithm trains a binary classifier for each label and chains the classifiers together in a way that considers the dependencies between the labels.</p>
+    <p class="p_size_large">The training process starts with the first binary classifier, which predicts the first label. The predicted label is then used as an input feature for the second binary classifier, which predicts the second label. This process is repeated for each subsequent binary classifier in the chain. This way, the classifier chains algorithm takes into account the dependencies between the labels, which can improve the accuracy of the predictions.</p>
+    <p class="p_size_large">In the testing phase, the classifier chains algorithm uses the same process as the training phase to make predictions for each label. However, the predictions are made in a forward-pass fashion, where the predictions of one classifier are used as input features for the next classifier in the chain.</p>
+    <p class="p_size_large">One advantage of the classifier chains algorithm is that it is efficient in terms of computation time. Since the binary classifiers are trained one at a time, the algorithm can be parallelized, which can significantly reduce the computation time. Additionally, the classifier chains algorithm is easy to implement and can be applied to any type of binary classifier, such as decision trees, support vector machines, or neural networks.</p>
+    <p class="p_size_large">In conclusion, the classifier chains algorithm is a useful tool for multi-label classification, as it takes into account the dependencies between the labels to improve the accuracy of the predictions. The algorithm is efficient in terms of computation time and can be easily implemented with any type of binary classifier.</p>
+</main>
+
+{% endblock %}

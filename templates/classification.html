@@ -1,0 +1,40 @@
+{% extends "index.html"%}
+{% block content %}
+
+<main class="content">
+    <h1>Classification in Machine Learning</h1>
+    <p class="p_size_large">Classification is a type of supervised learning in machine learning where the algorithm is trained to categorize data into predefined classes. </p>
+    <p class="p_size_large">The goal of classification is to predict the class of an unseen instance based on the characteristics of the instances in the training dataset.</p>
+    <h3>Types of Classification</h3>
+    <ol class="p_size_large">
+        <li><h4>Binary Classification: </h4>Binary classification problem is one where the algorithm has to predict between two classes. For example, email spam classification.</li>
+        <li><h4>Multiclass Classification</h4>A multiclass classification problem is one where the algorithm has to predict between multiple classes. For example, image classification where the image can belong to any one of several classes such as dogs, cats, birds, etc.</li>
+        <li><h4>Multi-Label Classification</h4>A multi-label classification problem is one where an instance can belong to more than one class. For example, a news article can be categorized under both politics and sports</li>
+    </ol>
+    <h3>Here are some commonly used models for different types of classification</h3>
+    <h2>1. Binary Classification</h2>
+    <ol class="p_size_large" >
+        <li><a href="logistic_regression">Logistic Regression</a></li>
+        <li><a href="support_vector_machines">Support Vector Machines(SVM)</a></li>
+        <li><a href="k_nearest_neighbor">k-Nearest Neighbor(k-NN)</a></li>
+        <li><a href="naive_bayes">Naive Bayes</a></li>
+        <li><a href="decision_trees">Decision Trees</a></li>
+        <li><a href="random_forest">Random Forest</a></li>
+    </ol>
+    <h2>2. Multiclass Classification</h2>
+    <ol class="p_size_large">
+        <li><a href="one_vs_all">One-vs-All(One-vs-Rest)</a></li>
+        <li><a href="multinomial_logistic_regression">Multinomial Logistic Regression</a></li>
+        <li><a href="decision_trees">Decision Trees</a></li>
+        <li><a href="random_forest">Random Forest</a></li>
+        <li><a href="k_nearest_neighbor">k-Nearest Neighbor(k-NN)</a></li>
+    </ol>
+    <h2>3. Multi-label Classification</h2>
+    <ol class="p_size_large">
+        <li><a href="binary_relevance">Binary Relevance</a></li>
+        <li><a href="classifier_chains">Classifier Chains</a></li>
+        <li><a href="label_powerset">Label Powerset</a></li>
+        <li><a href="random_forest_based_models">Random Forest-based models</a></li>
+    </ol>
+</main>
+{% endblock %}

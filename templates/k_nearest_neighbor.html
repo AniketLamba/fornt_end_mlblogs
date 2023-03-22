@@ -1,0 +1,19 @@
+{% extends "index.html"%}
+{%block content %}
+
+<main class="content">
+    <h1>k-Nearest Neighbor</h1>
+    <p class="p_size_large">K-Nearest Neighbor (KNN) is a simple and straightforward supervised machine learning algorithm that can be used for both classification and regression. In this algorithm, the idea is to predict the class or value of a new data point based on its proximity to its k nearest neighbors in the training data.</p>
+    <p class="p_size_large">In the case of classification, the new data point is assigned the class label that is most common among its k nearest neighbors. In the case of regression, the new data point is assigned the average value of its k nearest neighbors.</p>
+    <p class="p_size_large">The mathematical formulation of KNN is based on the concept of distance, which is used to measure the similarity between two data points. The most commonly used distance metric is the Euclidean distance, which is defined as:</p>
+    <p class="p_size_large">d(x, y) = sqrt((x1 - y1)^2 + (x2 - y2)^2 + ... + (xn - yn)^2)</p>
+    <p class="p_size_large">where x and y are two data points with n features, and xi and yi are the values of the ith feature.</p>
+    <p class="p_size_large">Given a new data point x, the KNN algorithm first finds the k nearest neighbors in the training data using the distance metric. Then, the class label or value of x is predicted based on the majority class label or average value of its k nearest neighbors.</p>
+    <p class="p_size_large">One of the strengths of the KNN algorithm is its simplicity and ease of implementation. It does not require any training or model fitting, as all the information needed to make predictions is stored in the training data. However, one of the weaknesses of KNN is that it can be computationally expensive, as the distances between the new data point and all the training data must be calculated for each prediction.</p>
+    <p class="p_size_large">Another issue with KNN is that it is sensitive to the choice of k, as the performance of the algorithm can vary greatly depending on the value of k. A small value of k can lead to overfitting, where the algorithm is too influenced by the noise in the training data, while a large value of k can lead to underfitting, where the algorithm is too general and does not capture the underlying pattern in the data.In the case of regression, the loss function used by KNN is typically the mean squared error (MSE), which is defined as:</p>
+    <p class="p_size_large">MSE = (1/N) * sum((y - y_pred)^2)</p>
+    <p class="p_size_large">where y is the true value of the target variable, y_pred is the predicted value, and N is the number of data points.</p>
+    <p class="p_size_large">In conclusion, K-Nearest Neighbor is a simple and flexible machine learning algorithm that can be used for both classification and regression. Its strength lies in its simplicity and ease of implementation, while its weaknesses include computational cost and sensitivity to the choice of k. The algorithm is based on the concept of distance and predicts the class label or value of a new data point based on its proximity to its k nearest neighbors in the training data. The loss function used in regression is the mean squared error.</p>
+</main>
+
+{% endblock %}

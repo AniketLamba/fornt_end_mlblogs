@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aniket front end project</title>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+</head>
+<body>
+    <nav class="navbar">
+      <div class="dropdown">
+        <button class="dropbtn">
+          <a href="home">Home</a>
+        </button>
+      </div>
+        <div class="dropdown">
+          <button class="dropbtn"><a href="supervised">Supervised</a> </button>
+          <div class="dropdown-content">
+            <a href="classification">Classification</a>
+            <a href="regression">Regression</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn"> <a href="unsupervised">Unsupervised</a> </button>
+          <div class="dropdown-content">
+            <a href="clustering">Clustering</a>
+            <a href="association">Association</a>
+            
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn"> <a href="reinforcement">Reinforcement</a></button>
+          <div class="dropdown-content">
+            <a href="#">Reinforcemnt 1</a>
+          </div>
+        </div>
+      </nav>
+      
+      <div class="container">
+          <aside class="left-side-menu">
+              <nav class="menu">
+                  <ul>
+                      <li><a href="logistic_regression">Logistic Regression</a></li>
+                      <li><a href="k_nearest_neighbor">k-Nearest Neighbor</a></li>
+                      <li><a href="decision_trees">Decision Trees</a></li>
+                      <li><a href="random_forest">Random Forest</a></li>
+                      <li><a href="support_vector_machines">Support Vector Machines</a></li>
+                      <li><a href=""></a></li>
+                      <li><a href=""></a></li>
+                      <li><a href=""></a></li>
+                      <li><a href=""></a></li>
+                      <li><a href=""></a></li>
+                      <li><a href=""></a></li>
+                      <li><a href=""></a></li>
+                  </ul>
+                </nav>
+            </aside>
+            {% block content %}
+            
+        <main class="content">
+          <h1>What is Machine Learning</h1>
+          <p class="p_size_large">In the real world, we are surrounded by humans who can learn everything from their experiences with their learning capability, and we have computers or machines which work on our instructions. But can a machine also learn from experiences or past data like a human does?</p>
+          <p class="p_size_large">So here comes the role of <b>Machine Learning.</b></p>
+          <h1>How does Machine Learning work</h1>
+          <p class="p_size_large">
+              A Machine Learning system <b>learns from historical data, builds the prediction models, and whenever it receives new data, predicts the output for it.</b>The accuracy of predicted output depends upon the amount of data, as the huge amount of data helps to build a better model which predicts the output more accurately.
+            </p>
+            <p class="p_size_large">Suppose we have a complex problem, where we need to perform some predictions, so instead of writing a code for it, we just need to feed the data to generic algorithms, and with the help of these algorithms, machine builds the logic as per the data and predict the output. Machine learning has changed our way of thinking about the problem. The below block diagram explains the working of Machine Learning algorithm:</p>
+            <h1>Features of Machine Learning:</h1>
+            <ul class="p_size_large">
+                <li>Machine learning uses data to detect various patterns in a given dataset.</li>
+                <li>It can learn from past data and improve automatically.</li>
+                <li>It is a data-driven technology.</li>
+                <li>Machine learning is much similar to data mining as it also deals with the huge amount of the data.</li>
+            </ul>
+            <h1>Classification of Machine Learning</h1>
+            <p class="p_size_large">At a broad level, machine learning can be classified into three types:</p>
+        <ol class="p_size_large">
+            <li><b>Supervised Learning</b></li>
+            <li><b>Unsupervised Learning</b></li>
+            <li><b>Reinforcement Learning</b></li>
+        </ol>
+        
+    </main>
+  </div>
+        {% endblock %}
+        
+    </body>
+    </html>

@@ -1,0 +1,16 @@
+{% extends "index.html"%}
+{%block content %}
+
+<main class="content">
+    <h1>Multinomial Logistic Regression</h1>
+    <p class="p_size_large">Multinomial Logistic Regression is a statistical method used for multiclass classification problems, where the goal is to predict the class of an instance based on multiple class labels. Unlike binary logistic regression, which only handles two classes, multinomial logistic regression can handle any number of classes.</p>
+    <p class="p_size_large">The model of multinomial logistic regression is a generalization of the binary logistic regression model. It uses a similar framework but extends it to multiple classes by fitting one logistic regression model for each class, where each model tries to predict the probability of the class being a positive class. The final prediction is then made by selecting the class with the highest predicted probability.</p>
+    <p class="p_size_large">Mathematically, multinomial logistic regression models the relationship between the independent variables and the log-odds of the dependent variable being in a particular class. The logistic regression equation is:</p>
+    <p class="p_size_large">ln(p/1-p) = β0 + β1x1 + β2x2 + ... + βnxn</p>
+    <p class="p_size_large">Where p is the predicted probability of the class being the positive class, and x1, x2, ..., xn are the independent variables. The coefficients β0, β1, β2, ..., βn are estimated using maximum likelihood estimation.</p>
+    <p class="p_size_large">Loss functions, such as the cross-entropy loss, are used to evaluate the performance of the multinomial logistic regression model. The goal is to minimize the loss function, which measures the difference between the predicted probabilities and the actual class labels, by adjusting the coefficients in the logistic regression equation.</p>
+    <p class="p_size_large">Multinomial logistic regression is widely used in various domains such as natural language processing, image recognition, and marketing. It is simple to implement and has a low computational cost, making it a popular choice for large-scale multiclass classification problems.</p>
+    <p class="p_size_large">In conclusion, multinomial logistic regression is a powerful method for solving multiclass classification problems. It uses a similar framework as binary logistic regression but extends it to handle multiple classes. The model is fit by estimating the coefficients in the logistic regression equation and the performance of the model is evaluated using loss functions.</p>
+</main>
+
+{% endblock %}

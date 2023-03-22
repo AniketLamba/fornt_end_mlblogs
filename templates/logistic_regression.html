@@ -1,0 +1,25 @@
+{% extends "index.html"%}
+{%block content %}
+
+<main class="content">
+    <h1>Logistic Regression</h1>
+    <p class="p_size_large">Logistic Regression is a popular statistical model used in the field of supervised machine learning for binary classification problems. The main goal of logistic regression is to find the relationship between one or more independent variables and a binary dependent variable (i.e., output can only be 0 or 1).</p>
+    <p class="p_size_large">The logistic regression model is based on the logistic function (also known as the sigmoid function), which is used to model the probability of an event occurring. The logistic regression model estimates the probability of a binary response as a function of one or more predictor variables. The logistic function maps any real-valued number to a value between 0 and 1, and it is defined as:
+        p = 1 / (1 + e^-z)
+    </p>
+    <p class="p_size_large">where z is the linear combination of the predictors: z = b0 + b1x1 + b2x2 + ... + bkxk</p>
+    <p class="p_size_large">Here, b0, b1, b2, ..., bk are the coefficients of the logistic regression model, and x1, x2, ..., xk are the predictor variables. The coefficients represent the contribution of each predictor to the linear combination, and they are estimated during the model training process.</p>
+    <p class="p_size_large">The logistic regression model is trained using maximum likelihood estimation, which is a statistical technique that finds the values of the coefficients that maximize the likelihood of observing the training data. The objective of the logistic regression model is to minimize the negative log-likelihood of the training data.</p>
+    <p class="p_size_large">Once the coefficients are estimated, the logistic regression model can be used to make predictions for new observations. Given the values of the predictor variables for a new observation, the logistic regression model can estimate the probability of the binary response being 1. If the probability is greater than 0.5, the prediction is 1, otherwise it is 0.</p>
+    <p class="p_size_large">One of the strengths of logistic regression is its interpretability. The coefficients of the logistic regression model can be used to understand the relationship between the predictor variables and the binary response. For example, a positive coefficient for a predictor variable indicates that an increase in the predictor is associated with an increase in the probability of the binary response being 1, while a negative coefficient indicates the opposite relationship</p>
+    <p class="p_size_large">There are several extensions of the basic logistic regression model that are used in various situations, including:</p>
+    <ol class="p_size_large">
+        <li>Multinomial Logistic Regression: Used for multiclass classification problems, where the binary response can take more than two values.</li>
+        <li>Regularized Logistic Regression: Used to prevent overfitting by adding a penalty term to the negative log-likelihood objective. Common regularization techniques include L1 regularization (also known as Lasso) and L2 regularization (also known as Ridge).</li>
+        <li>Logistic Regression with Interactions: Used to model the relationship between the predictor variables and the binary response taking into account the interaction between the predictors.</li>
+        <li>Logistic Regression for Longitudinal Data: Used for repeated measures data, where multiple observations are collected for each individual over time.</li>
+    </ol>
+    <p class="p_size_large">In conclusion, logistic regression is a widely used statistical model for binary classification problems. It is simple to implement, interpretable, and can be easily extended to handle various types of data and situations.</p>
+</main>
+
+{% endblock %}
